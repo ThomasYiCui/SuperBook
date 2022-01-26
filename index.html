@@ -1,20 +1,58 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8">
+        <title>Top games on KA</title>
+    </head>
     <style>
         body {
-            background-color: rgb(233, 231, 245);
-            font-family: arial;
+            font-family: sans-serif;
+            background: rgb(250, 250, 250);
+        }
+        
+        nav {
+            transition: 500ms;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: rgb(94, 94, 94);
+            position: fixed;
+            margin-top: 10px;
+            line-height: 40px;
+            width: 93%;
+            top: 0;
+            font-family: sans-serif;
+            z-index: 1;
+            padding: 10px;
+            border-radius: 5px;
         }
         a {
-            color: rgb(255, 0, 0);
+            display: inline-block;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            position: relative;
+            height: 40px;
         }
-        a:hover {
-            animation-name: link-animation;
-            animation-duration: 3s;
-        }
-        hr {
-            background-color: rgb(100, 100, 100);
+        
+        a::after {
+            text-align: center;
+            content: "";
+            margin-top: -5px;
+            width: 0px;
+            height: 2px;
+            display: block;
+            background: rgb(222, 222, 222);
+            transition: 1000ms;
             width: 100%;
+            transform: scaleX(0);
+        }
+        
+        a:hover::after {
+            transform: scaleX(1);
+        }
+        .scene {
+            margin-top: 60px;
+            margin-left: 45px;
+            margin-right: 45px;
         }
         button {
             background-color: #4CAF50;
@@ -28,8 +66,20 @@
             font-size: 16px;
             border-radius: 5px;
         }
+        hr {
+            margin-left: -10%;
+            border: none;
+            background-color: rgb(212, 212, 212);
+            height: 5px;
+            width: 120%;
+            border-radius: 5px;
+            background: repeating-linear-gradient(45deg, rgb(200, 200, 200), rgb(200, 200, 200) 10px, rgb(212, 212, 212) 10px, rgb(212, 212, 212) 20px);
+        }
         .center {
             text-align: center;
+        }
+        .green {
+            color: rgb(55, 184, 81);
         }
         @keyframes link-animation {
             0% {
@@ -45,36 +95,81 @@
                 color: rgb(255, 0, 0);
             }
         }
+        @keyframes animPage {
+            from {
+                opacity: 0;
+            }
+            
+            to {
+                opacity: 1;
+            }
+        }
+        
+        
     </style>
     <body>
+    <nav>
+        <a href='javascript: changePage(0);'>Movie</a>
+        <a href='javascript: changePage(1);'>Questions</a>
+        <a href='javascript: changePage(2);'>Answer</a>
+    </nav>
+    
+    <div class='scene'>
+        <br>
         <h1 class = "center">Superbook - Job</h1>
-        <hr>
         <h2 class = "center">Movie</h2>
-        <p class = "center">Watch The <a href = "https://www.youtube.com/watch?v=QhPLGMMz7yk">Movie</a></p>
+        <p class = "center">Watch The <a href = "https://www.youtube.com/watch?v=QhPLGMMz7yk" class = "green">Movie</a></p>
         <hr>
-        <h2 class = "center">Questions</h2>
-        <ol>
+        <p class = "center">Made By Thomas<p>
+    </div>
+    <div class='scene'>
+        <br> 
+        <h1 class = "center">Questions</h1>
+        <ul>
             <li> God and Satan place a bet on Job. What does God allow Satan to do, and how does God think Job will react?
             <li> Does God set any limits to the damage Satan can inflict upon Job?
             <li> Did Job do what the Satan think he would?
             <li> How does this teach us about why sometimes we might a set backs or lose something?
-        </ol>
+        </ul>
+        <hr>
+        <p class = "center">Made By Thomas<p>
+    </div>
+    <div class='scene'>
+        <br>
+        <h1 class = "center">Answers</h1>
         <button onclick = "showAnswer()"><span id = "on">Answers</span></button>
         <hr>
-        <p id = "answerKey1"></p>
-        <p id = "answerKey2"></p>
-        <p id = "answerKey3"></p>
-        <p id = "answerKey4"></p>
+        <p id = "answerKey1">1.</p>
+        <p id = "answerKey2">2.</p>
+        <p id = "answerKey3">3.</p>
+        <p id = "answerKey4">4.</p>
         <hr>
-        <p class = "center">Made By Thomas</p>
-        <script>
-            function showAnswer (){
-                window.scrollTo(0, 2000);
-                document.getElementById("answerKey1").innerHTML = "1. Job would still praise god.";
-                document.getElementById("answerKey2").innerHTML = "2. Yes";
-                document.getElementById("answerKey3").innerHTML = "3. No.";
-                document.getElementById("answerKey4").innerHTML = "4. God will allow unfair things to come at you to make you stronger.";
+        <p class = "center">Made By Thomas<p>
+    </div>
+    
+    <script>
+        
+        var scenes = document.getElementsByClassName('scene');
+        
+        function changePage(index) {
+            window.scroll(0, 0);
+            for (var i = 0; i < scenes.length ; i++) {
+                scenes[i].style.display = 'none';
+                scenes[i].style.animation = 'animPage 5000ms forwards';
             }
-        </script>
+            scenes[index].style.display = 'block';
+        };
+        changePage(0);
+    </script>
+    <script>
+        function showAnswer (){
+            window.scrollTo(0, 2000);
+            document.getElementById("answerKey1").innerHTML = "1. Job would still praise god.";
+            document.getElementById("answerKey2").innerHTML = "2. Yes";
+            document.getElementById("answerKey3").innerHTML = "3. No.";
+            document.getElementById("answerKey4").innerHTML = "4. God will allow unfair things to come at you to make you stronger.";
+        }
+    </script>
+    
     </body>
 </html>
