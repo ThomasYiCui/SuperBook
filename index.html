@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body {
+            background-color: rgb(233, 231, 245);
+            font-family: arial;
+        }
+        a {
+            color: rgb(255, 0, 0);
+        }
+        a:hover {
+            animation-name: link-animation;
+            animation-duration: 3s;
+        }
+        hr {
+            background-color: rgb(100, 100, 100);
+            width: 100%;
+        }
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            margin: 0 auto;
+            display: block;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .center {
+            text-align: center;
+        }
+        @keyframes link-animation {
+            0% {
+                font-size: 100%;
+                color: rgb(255, 0, 0);
+            }
+            50% {
+                font-size: 150%;
+                color: rgb(200, 0, 0);
+            }
+            100% {
+                font-size: 100%;
+                color: rgb(255, 0, 0);
+            }
+        }
+    </style>
+    <body>
+        <h1 class = "center">Superbook - Job</h1>
+        <hr>
+        <h2 class = "center">Movie</h2>
+        <p class = "center">Watch The <a href = "https://www.youtube.com/watch?v=QhPLGMMz7yk">Movie</a></p>
+        <hr>
+        <h2 class = "center">Questions</h2>
+        <ol>
+            <li> God and Satan place a bet on Job. What does God allow Satan to do, and how does God think Job will react?
+            <li> Does God set any limits to the damage Satan can inflict upon Job?
+            <li> Did Job do what the Satan think he would?
+            <li> How does this teach us about why sometimes we might a set backs or lose something?
+        </ol>
+        <button onclick = "showAnswer()"><span id = "on">Answers</span></button>
+        <hr>
+        <p id = "answerKey1"></p>
+        <p id = "answerKey2"></p>
+        <p id = "answerKey3"></p>
+        <p id = "answerKey4"></p>
+        <hr>
+        <p class = "center">Made By Thomas</p>
+        <script>
+            function showAnswer (){
+                window.scrollTo(0, 2000);
+                document.getElementById("on").innerHTML = "See Answer";
+                document.getElementById("answerKey1").innerHTML = "1. Job would still praise god.";
+                document.getElementById("answerKey2").innerHTML = "2. Yes";
+                document.getElementById("answerKey3").innerHTML = "3. No.";
+                document.getElementById("answerKey4").innerHTML = "4. God will allow unfair things to come at you to make you stronger.";
+            }
+        </script>
+    </body>
+</html>
