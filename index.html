@@ -6,7 +6,7 @@
     </head>
     <style>
         body {
-            background-color: rgb(0, 0, 0);
+            background-color: rgb(18, 18, 18);
             font-family: arial;
             color: rgb(255, 255, 255);
         }
@@ -26,6 +26,17 @@
             text-decoration: none;
             color: rgb(0, 75, 214);
         }
+        nav {
+            display: flex;
+            margin-left: 5%;
+            width: 90%;
+            height: 50px;
+            border-radius: 5px;
+            line-height: 48px;
+            justify-content: space-evenly;
+            background-color: rgb(23, 23, 23);
+            font-size: 17px;
+        }
         .center {
             text-align: CENTER;
         }
@@ -33,8 +44,12 @@
             margin-left: 6.6667%;
             margin-top: 5%;
             float: left;
-            background-color: rgb(18, 18, 18);
+            background-color: rgb(21, 18, 26);
             width: 40%;
+            border-radius: 10px;
+        }
+        .prayer {
+            font-family: cursive;
         }
         button {
             margin-bottom: 10px;
@@ -43,70 +58,94 @@
             height: 40px;
             background-color: rgb(0, 65, 242);
             display: incline-block;
+            border-radius: 5px;
             border: none;
+        }
+        @keyframes animPage {
+            from {
+                opacity: 0;
+            }
+            
+            to {
+                opacity: 1;
+            }
         }
     </style>
     <body>
-        <h1 class = "center">Superbooks</h1>
-        
-        <!--In The Begining-->
-        <div class = "movies">
-            <br>
-            <a href = "https://www.youtube.com/watch?v=4dzjD5FxJPg&list=PL0zvCDP_0LjCpNejEZmCRhf5sG8heMtS2&index=1"><h2>In The Begining</h2></a>
-            
-            <hr>
-            <p>Estimated Time: ~27 min</p>
-            <hr>
-            
-            <p>Discription: We go into the journey of how God created the world. It cuts to the present time where we meet Joy, Chris, and Gismo. Chris's dad is working on a top secret invention but when he leaves Chris went to the room and saw the invention he just wanted to try it out but what a mess he made.  Moments later they found themselves in hevan but this unexpected field trip might be deadly.</p>
-            <button onclick = "answer(1);">Q&A</button>
+        <nav>
+            <a href = 'javascript: changePage(0);'>Prayer</a>
+            <a href  = 'javascript: changePage(1);'>Movies</a>
+            <a href = 'javascript: changePage(2);'>Q&A</a>
+        </nav>
+        <div class = "scene">
+            <h1 class = "center">Prayer</h1>
+            <p class = "center">Lets pray, an example for prayer can be:<span class = "prayer"><br>Dear God Thank you for this Day,<br>please let everyone here be healthy and safe. <br>Help us lern from out mistakes, <br>Amen.</span><br>Now you try!</p>
         </div>
-        
-        <!--The Test: Abraham And Issac-->
-        <div class = "movies">
-            <br>
-            <a href = "https://www.youtube.com/watch?v=UhuSolM_zZg&list=PL0zvCDP_0LjCpNejEZmCRhf5sG8heMtS2&index=2"><h2>The Test: Abraham And Issac</h2></a>
-            
-            <hr>
-            <p>Estimated Time: ~26 min</p>
-            <hr>
-            
-            <p>Discription: We meet an old man named Abraham who was promised load of children by god. The movie then cuts to Chris who always wanted Holo 9 and today his parents got him one. Chris heard there was a sick boy who wanted Holo 9 just like Chris. Suddenly Superbook came out, will Chris learn anything from this trip?<br><br></p>
-            <button onclick = "answer(2);">Q&A</button>
+        <div class = "scene">
+            <h1 class = "center">Superbooks</h1>
+            <!--In The Begining-->
+            <div class = "movies">
+                <br>
+                <a href = "https://www.youtube.com/watch?v=4dzjD5FxJPg&list=PL0zvCDP_0LjCpNejEZmCRhf5sG8heMtS2&index=1"><h2>In The Begining</h2></a>
+                
+                <hr>
+                <p>Estimated Time: ~27 min</p>
+                <hr>
+                
+                <p>Discription: We go into the journey of how God created the world. It cuts to the present time where we meet Joy, Chris, and Gismo. Chris's dad is working on a top secret invention but when he leaves Chris went to the room and saw the invention he just wanted to try it out but what a mess he made.  Moments later they found themselves in hevan but this unexpected field trip might be deadly.</p>
+                <button onclick = "answer(1);">Q&A</button>
         </div>
-        
-        <!--Jacob and Esau-->
-        <div class = "movies">
-            <br>
-            <a href = "https://www.youtube.com/watch?v=WVjgJhk6yAw&list=PL0zvCDP_0LjCpNejEZmCRhf5sG8heMtS2&index=3"><h2>Jacob And Esau</h2></a>
             
-            <hr>
-            <p>Estimated Time: ~27 min</p>
-            <hr>
-            
-            <p>Discription: It starts off with Chris, Gizmo and Joy having a waterfight, but then water baloon enters Gizmos system making him only listen to orders from Joy! Chris got very angry and blammed her for messing up Gizmos memory saying he will never forgive her. Just then super book came and sent them to meet Jacob, Esau, and others. Maybe Chris can learn a trait or two from them.</p>
-            <button onclick = "answer(3);">Q&A</button>
+            <!--The Test: Abraham And Issac-->
+            <div class = "movies">
+                <br>
+                <a href = "https://www.youtube.com/watch?v=UhuSolM_zZg&list=PL0zvCDP_0LjCpNejEZmCRhf5sG8heMtS2&index=2"><h2>The Test: Abraham And Issac</h2></a>
+                
+                <hr>
+                <p>Estimated Time: ~26 min</p>
+                <hr>
+                
+                <p>Discription: We meet an old man named Abraham who was promised load of children by god. The movie then cuts to Chris who always wanted Holo 9 and today his parents got him one. Chris heard there was a sick boy who wanted Holo 9 just like Chris. Suddenly Superbook came out, will Chris learn anything from this trip?<br><br></p>
+                <button onclick = "answer(2);">Q&A</button>
         </div>
-        
-        <!--Let My People Go-->
-        <div class = "movies">
-            <br>
-            <a href = "https://www.youtube.com/watch?v=Nt4kCgt_Kj4&list=PL0zvCDP_0LjCpNejEZmCRhf5sG8heMtS2&index=4"><h2>Let My People Go</h2></a>
             
-            <hr>
-            <p>Estimated Time: ~26 min</p>
-            <hr>
-            
-            <p>Discription: The movie starts off with Chris, Gizmo and Joy hanging out and asking the best things. A few questions later gizmo asked about the best superbook adventure ever and just on que Superbook showed up. Will Chris, Gizmo, and Joy find out is this adventure with Superbook is the best one they had possibly the best one ever. Watch the Movie and you decide.</p>
-            <button onclick = "answer(4);">Q&A</button>
+            <!--Jacob and Esau-->
+            <div class = "movies">
+                <br>
+                <a href = "https://www.youtube.com/watch?v=WVjgJhk6yAw&list=PL0zvCDP_0LjCpNejEZmCRhf5sG8heMtS2&index=3"><h2>Jacob And Esau</h2></a>
+                
+                <hr>
+                <p>Estimated Time: ~27 min</p>
+                <hr>
+                
+                <p>Discription: It starts off with Chris, Gizmo and Joy having a waterfight, but then water baloon enters Gizmos system making him only listen to orders from Joy! Chris got very angry and blammed her for messing up Gizmos memory saying he will never forgive her. Just then super book came and sent them to meet Jacob, Esau, and others. Maybe Chris can learn a trait or two from them.</p>
+                <button onclick = "answer(3);">Q&A</button>
         </div>
-        <hr>
-        <p id = "1">1.</p>
-        <p id = "2">2.</p>
-        <p id = "3">3.</p>
-        <p id = "4">4.</p>
+            
+            <!--Let My People Go-->
+            <div class = "movies">
+                <br>
+                <a href = "https://www.youtube.com/watch?v=Nt4kCgt_Kj4&list=PL0zvCDP_0LjCpNejEZmCRhf5sG8heMtS2&index=4"><h2>Let My People Go</h2></a>
+                
+                <hr>
+                <p>Estimated Time: ~26 min</p>
+                <hr>
+                
+                <p>Discription: The movie starts off with Chris, Gizmo and Joy hanging out and asking the best things. A few questions later gizmo asked about the best superbook adventure ever and just on que Superbook showed up. Will Chris, Gizmo, and Joy find out is this adventure with Superbook is the best one they had possibly the best one ever. Watch the Movie and you decide.</p>
+                <button onclick = "answer(4);">Q&A</button>
+        </div>
+        </div>
+        <div class = "scene">
+            <p id = "1">1.</p>
+            <p id = "2">2.</p>
+            <p id = "3">3.</p>
+            <p id = "4">4.</p>
+        </div>
+    
+    <!--Core program-->
     <script>
         var once = 0;
+        var pago = 0;
         var scenes = document.getElementsByClassName('scene');
         var answers = [
             [
@@ -129,6 +168,7 @@
             ]
         ];
         function answer(which){
+            changePage(1);
             window.scrollBy(0, 99999999)
             document.getElementById("1").innerHTML = answers[which - 1][0][0]
             document.getElementById("2").innerHTML = answers[which - 1][1][0]
@@ -141,6 +181,12 @@
                     answerGet(which)
                 });         
                 document.body.appendChild(btn);
+                var btn2 = document.createElement("button");
+                btn2.innerHTML = "Questions";
+                btn2.addEventListener("click", function () {
+                    answer(which)
+                });         
+                document.body.appendChild(btn2);
             }
             once+=1;
         };
@@ -151,7 +197,23 @@
             document.getElementById("3").innerHTML = answers[which - 1][2][1]
             document.getElementById("4").innerHTML = answers[which - 1][3][1]
         };
+    </script>
+    
+    <!--Hide and unhide thigns-->
+    <script>
+        
+        var scenes = document.getElementsByClassName('scene');
+        
+        function changePage(index) {
+            window.scroll(0, 0);
+            for (var i = 0; i < scenes.length ; i++) {
+                scenes[i].style.display = 'none';
+                scenes[i].style.animation = 'animPage 2500ms forwards';
+            }
+            scenes[index].style.display = 'block';
+        };
         changePage(0);
+
     </script>
     </body>
 </html>
