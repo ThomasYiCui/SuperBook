@@ -6,179 +6,152 @@
     </head>
     <style>
         body {
-            font-family: sans-serif;
-            background: rgb(250, 250, 250);
-        }
-        
-        nav {
-            transition: 500ms;
-            display: flex;
-            justify-content: space-evenly;
-            background-color: rgb(94, 94, 94);
-            position: fixed;
-            margin-top: 10px;
-            line-height: 40px;
-            width: 93%;
-            top: 0;
-            font-family: sans-serif;
-            z-index: 1;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        a {
-            display: inline-block;
+            background-color: rgb(0, 0, 0);
+            font-family: arial;
             color: rgb(255, 255, 255);
-            text-decoration: none;
-            position: relative;
-            height: 40px;
         }
-        
-        a::after {
-            text-align: center;
-            content: "";
-            margin-top: -5px;
-            width: 0px;
-            height: 2px;
-            display: block;
-            background: rgb(222, 222, 222);
-            transition: 1000ms;
-            width: 100%;
-            transform: scaleX(0);
-        }
-        
-        a:hover::after {
-            transform: scaleX(1);
-        }
-        button {
-            background-color: rgb(52, 130, 0);
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            margin: 0 auto;
-            display: block;
-            font-size: 16px;
-            border-radius: 5px;
-        }
-        button:hover {
-            background-color: rgb(40, 120, 0);
+        h2 {
+            text-align: CENTER;
+            font-size: 23px;
         }
         hr {
-            margin-left: -10%;
             border: none;
             background-color: rgb(212, 212, 212);
             height: 5px;
-            width: 120%;
+            width: 100%;
             border-radius: 5px;
-            background: repeating-linear-gradient(45deg, rgb(200, 200, 200), rgb(200, 200, 200) 10px, rgb(212, 212, 212) 10px, rgb(212, 212, 212) 20px);
+            background: repeating-linear-gradient(45deg, rgb(0, 72, 255), rgb(0, 72, 255) 10px, rgb(0, 0, 255) 10px, rgb(0, 0, 255) 20px);
+        }
+        a {
+            text-decoration: none;
+            color: rgb(0, 75, 214);
         }
         .center {
-            text-align: center;
+            text-align: CENTER;
         }
-        .green {
-            color: rgb(55, 184, 81);
+        .movies {
+            margin-left: 6.6667%;
+            margin-top: 5%;
+            float: left;
+            background-color: rgb(18, 18, 18);
+            width: 40%;
         }
-        .scene {
-            margin-top: 60px;
-            margin-left: 45px;
-            margin-right: 45px;
+        button {
+            margin-bottom: 10px;
+            margin-left: 5%;
+            width: 90%;
+            height: 40px;
+            background-color: rgb(0, 65, 242);
+            display: incline-block;
+            border: none;
         }
-        .madeByThomas {
-            margin-top: -1.6%;
-            margin-left: -10%;
-            width: 120%;
-            padding-top: 50px;
-            padding-bottom: 50px;
-            background-color: rgb(126, 255, 151);
-            background: repeating-linear-gradient(45deg, rgb(200, 200, 200), rgb(200, 200, 200) 10px, rgb(212, 212, 212) 10px, rgb(212, 212, 212) 20px);
-        }
-        @keyframes link-animation {
-            0% {
-                font-size: 100%;
-                color: rgb(255, 0, 0);
-            }
-            50% {
-                font-size: 150%;
-                color: rgb(200, 0, 0);
-            }
-            100% {
-                font-size: 100%;
-                color: rgb(255, 0, 0);
-            }
-        }
-        @keyframes animPage {
-            from {
-                opacity: 0;
-            }
-            
-            to {
-                opacity: 1;
-            }
-        }
-        
-        
     </style>
     <body>
-    <nav>
-        <a href='javascript: changePage(0);'>Movie</a>
-        <a href='javascript: changePage(1);'>Questions</a>
-        <a href='javascript: changePage(2);'>Answer</a>
-    </nav>
-    
-    <div class='scene'>
-        <br>
-        <h1 class = "center">Superbook - Job</h1>
-        <h2 class = "center">Movie</h2>
-        <p class = "center">Watch The <a href = "https://www.youtube.com/watch?v=QhPLGMMz7yk" class = "green">Movie</a></p>
-        <p class = "center madeByThomas">Made By Thomas<p>
-    </div>
-    <div class='scene'>
-        <br> 
-        <h1 class = "center">Questions</h1>
-        <ul>
-            <li> God and Satan place a bet on Job. What does God allow Satan to do, and how does God think Job will react?
-            <li> Does God set any limits to the damage Satan can inflict upon Job?
-            <li> Did Job do what the Satan think he would?
-            <li> How does this teach us about why sometimes we might a set backs or lose something?
-        </ul>
-        <p class = "center madeByThomas">Made By Thomas<p>
-    </div>
-    <div class='scene'>
-        <br>
-        <h1 class = "center">Answers</h1>
-        <button onclick = "showAnswer()"><span id = "on">Answers</span></button>
+        <h1 class = "center">Superbooks</h1>
+        
+        <!--In The Begining-->
+        <div class = "movies">
+            <br>
+            <a href = "https://www.youtube.com/watch?v=4dzjD5FxJPg&list=PL0zvCDP_0LjCpNejEZmCRhf5sG8heMtS2&index=1"><h2>In The Begining</h2></a>
+            
+            <hr>
+            <p>Estimated Time: ~27 min</p>
+            <hr>
+            
+            <p>Discription: We go into the journey of how God created the world. It cuts to the present time where we meet Joy, Chris, and Gismo. Chris's dad is working on a top secret invention but when he leaves Chris went to the room and saw the invention he just wanted to try it out but what a mess he made.  Moments later they found themselves in hevan but this unexpected field trip might be deadly.</p>
+            <button onclick = "answer(1);">Q&A</button>
+        </div>
+        
+        <!--The Test: Abraham And Issac-->
+        <div class = "movies">
+            <br>
+            <a href = "https://www.youtube.com/watch?v=UhuSolM_zZg&list=PL0zvCDP_0LjCpNejEZmCRhf5sG8heMtS2&index=2"><h2>The Test: Abraham And Issac</h2></a>
+            
+            <hr>
+            <p>Estimated Time: ~26 min</p>
+            <hr>
+            
+            <p>Discription: We meet an old man named Abraham who was promised load of children by god. The movie then cuts to Chris who always wanted Holo 9 and today his parents got him one. Chris heard there was a sick boy who wanted Holo 9 just like Chris. Suddenly Superbook came out, will Chris learn anything from this trip?<br><br></p>
+            <button onclick = "answer(2);">Q&A</button>
+        </div>
+        
+        <!--Jacob and Esau-->
+        <div class = "movies">
+            <br>
+            <a href = "https://www.youtube.com/watch?v=WVjgJhk6yAw&list=PL0zvCDP_0LjCpNejEZmCRhf5sG8heMtS2&index=3"><h2>Jacob And Esau</h2></a>
+            
+            <hr>
+            <p>Estimated Time: ~27 min</p>
+            <hr>
+            
+            <p>Discription: It starts off with Chris, Gizmo and Joy having a waterfight, but then water baloon enters Gizmos system making him only listen to orders from Joy! Chris got very angry and blammed her for messing up Gizmos memory saying he will never forgive her. Just then super book came and sent them to meet Jacob, Esau, and others. Maybe Chris can learn a trait or two from them.</p>
+            <button onclick = "answer(3);">Q&A</button>
+        </div>
+        
+        <!--Let My People Go-->
+        <div class = "movies">
+            <br>
+            <a href = "https://www.youtube.com/watch?v=Nt4kCgt_Kj4&list=PL0zvCDP_0LjCpNejEZmCRhf5sG8heMtS2&index=4"><h2>Let My People Go</h2></a>
+            
+            <hr>
+            <p>Estimated Time: ~26 min</p>
+            <hr>
+            
+            <p>Discription: The movie starts off with Chris, Gizmo and Joy hanging out and asking the best things. A few questions later gizmo asked about the best superbook adventure ever and just on que Superbook showed up. Will Chris, Gizmo, and Joy find out is this adventure with Superbook is the best one they had possibly the best one ever. Watch the Movie and you decide.</p>
+            <button onclick = "answer(4);">Q&A</button>
+        </div>
         <hr>
-        <p id = "answerKey1">1.</p>
-        <p id = "answerKey2">2.</p>
-        <p id = "answerKey3">3.</p>
-        <p id = "answerKey4">4.</p>
-        <p class = "center madeByThomas">Made By Thomas<p>
-    </div>
-    
+        <p id = "1">1.</p>
+        <p id = "2">2.</p>
+        <p id = "3">3.</p>
+        <p id = "4">4.</p>
     <script>
-        
+        var once = 0;
         var scenes = document.getElementsByClassName('scene');
-        
-        function changePage(index) {
-            window.scroll(0, 0);
-            for (var i = 0; i < scenes.length ; i++) {
-                scenes[i].style.display = 'none';
-                scenes[i].style.animation = 'animPage 5000ms forwards';
+        var answers = [
+            [
+                ["What is the Serpent that tricked Adam and Eve's name?", "Lucifer."], 
+                ["What did Adam and Eve do to get Banned from Eden?", "They ate from the Forbidden Tree's Fruit."],
+                ["How can Chris's situation same or differ from Adam and Eve's?", "Both made a mistake, but Adam and Eve's was much worse."],
+                ["BONUS: During the fight why did Lucifer want to control Heavan?", "He thought he could be God."]
+            ],
+            [
+                ["Who was Abraham's son's Name?", "Issac."], 
+                ["What did God Command Abraham to do?", "Sacfrice his only son Issac."],
+                ["How is Chris's situation like Abrahams, how is it different.", "They both had to sacrifice something for something better, though Abraham was commanded not to."],
+                ["BONUS: What was the thing Issac used to keep track of the stars?", "Abacus."]
+            ]
+            [
+                ["Who was Abraham's son's Name?", "Issac."], 
+                ["What did God Command Abraham to do?", "Sacfrice his only son Issac."],
+                ["How is Chris's situation like Abrahams, how is it different.", "They both had to sacrifice something for something better, though Abraham was commanded not to."],
+                ["BONUS: What was the thing Issac used to keep track of the stars?", "Abacus."]
+            ]
+        ];
+        function answer(which){
+            window.scrollBy(0, 99999999)
+            document.getElementById("1").innerHTML = answers[which - 1][0][0]
+            document.getElementById("2").innerHTML = answers[which - 1][1][0]
+            document.getElementById("3").innerHTML = answers[which - 1][2][0]
+            document.getElementById("4").innerHTML = answers[which - 1][3][0]
+            if(once < 1){
+                var btn = document.createElement("button");
+                btn.innerHTML = "Answer";
+                btn.addEventListener("click", function () {
+                    answerGet(which)
+                });         
+                document.body.appendChild(btn);
             }
-            scenes[index].style.display = 'block';
+            once+=1;
+        };
+        function answerGet(which){
+            window.scrollBy(0, 99999999)
+            document.getElementById("1").innerHTML = answers[which - 1][0][1]
+            document.getElementById("2").innerHTML = answers[which - 1][1][1]
+            document.getElementById("3").innerHTML = answers[which - 1][2][1]
+            document.getElementById("4").innerHTML = answers[which - 1][3][1]
         };
         changePage(0);
     </script>
-    <script>
-        function showAnswer (){
-            window.scrollTo(0, 2000);
-            document.getElementById("answerKey1").innerHTML = "1. Job would still praise god.";
-            document.getElementById("answerKey2").innerHTML = "2. Yes";
-            document.getElementById("answerKey3").innerHTML = "3. No.";
-            document.getElementById("answerKey4").innerHTML = "4. God will allow unfair things to come at you to make you stronger.";
-        }
-    </script>
-    
     </body>
 </html>
