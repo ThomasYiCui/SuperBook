@@ -28,14 +28,22 @@
         }
         nav {
             display: flex;
-            margin-left: 5%;
-            width: 90%;
+            margin-left: 20%;
+            width: 75%;
             height: 50px;
             border-radius: 5px;
             line-height: 48px;
             justify-content: space-evenly;
             background-color: rgb(23, 23, 23);
             font-size: 17px;
+        }
+        #title {
+            margin-left: 3.4%;
+            margin-top: 0px;
+            position: absolute;
+            font-size: 21px;
+            text-align: center;
+            color: rgb(255, 255, 255);
         }
         .center {
             text-align: CENTER;
@@ -50,6 +58,7 @@
         }
         .prayer {
             font-family: cursive;
+            color: rgb(207, 255, 215);
         }
         button {
             margin-bottom: 10px;
@@ -72,6 +81,7 @@
         }
     </style>
     <body>
+        <a id = "title" href = "https://www.youtube.com/channel/UCmkgg5el8Fg3IX_baZyfSaQ">Super<br>book</a>
         <nav>
             <a href = 'javascript: changePage(0);'>Prayer</a>
             <a href  = 'javascript: changePage(1);'>Movies</a>
@@ -79,7 +89,7 @@
         </nav>
         <div class = "scene">
             <h1 class = "center">Prayer</h1>
-            <p class = "center">Lets pray, an example for prayer can be:<span class = "prayer"><br>Dear God Thank you for this Day,<br>please let everyone here be healthy and safe. <br>Help us lern from out mistakes, <br>Amen.</span><br>Now you try!</p>
+            <p class = "center">Prayer is a big part in beliving in God, its import as being<br>nice and helping people.<br>So lets pray, an example for prayer can be:<span class = "prayer"><br><br>Dear God Thank you for this Day,<br>please let everyone here be healthy and safe. <br>Help us lern from out mistakes, <br>Amen.</span><br><br>Now you try!</p>
         </div>
         <div class = "scene">
             <h1 class = "center">Superbooks</h1>
@@ -136,6 +146,8 @@
         </div>
         </div>
         <div class = "scene">
+            <h1 class = "center">Q&A</h1>
+            <p class = "center">Lets see if you understand what the movine was about!</p>
             <p id = "1">1.</p>
             <p id = "2">2.</p>
             <p id = "3">3.</p>
@@ -159,43 +171,50 @@
                 ["What did God Command Abraham to do?", "Sacfrice his only son Issac."],
                 ["How is Chris's situation like Abrahams, how is it different.", "They both had to sacrifice something for something better, though Abraham was commanded not to."],
                 ["BONUS: What was the thing Issac used to keep track of the stars?", "Abacus."]
-            ]
+            ],
             [
-                ["Who was Abraham's son's Name?", "Issac."], 
-                ["What did God Command Abraham to do?", "Sacfrice his only son Issac."],
-                ["How is Chris's situation like Abrahams, how is it different.", "They both had to sacrifice something for something better, though Abraham was commanded not to."],
-                ["BONUS: What was the thing Issac used to keep track of the stars?", "Abacus."]
-            ]
+                ["What was the youngest Son called.", "Jacob."], 
+                ["What did God command Jacob to do when he left to get away from his brothers wrath.", "Go back."],
+                ["How is Chris's situation like Esau's, how is it different.", "They both forgived each other, but the reason they had to forgive was different."],
+                ["BONUS: What did God change Jacobs name to, and if you know what does it mean.", "Israel, one meaning can be 'Wrestles with God'."]
+            ],
+            [
+                ["Why did Moses flee to the land of Midian?", "He took down Egyptian slavemaster."], 
+                ["Why did God send Moses back to Egypt?", "To free the Israelites."],
+                ["What sea did God part in order to help the Israelites escape the Egyptians?", "The Red Sea."],
+                ["BONUS: Which plague finally convinced Pharaoh to release the Israelites?.", "The death of all firstborns."]
+            ],
         ];
+        document.getElementById("Sentence").innerhtml = "Be merciful, just as your father is merciful--"
         function answer(which){
             changePage(2);
-            window.scrollBy(0, 99999999)
-            document.getElementById("1").innerHTML = answers[which - 1][0][0]
-            document.getElementById("2").innerHTML = answers[which - 1][1][0]
-            document.getElementById("3").innerHTML = answers[which - 1][2][0]
-            document.getElementById("4").innerHTML = answers[which - 1][3][0]
+            window.scrollBy(0, 99999999);
+            document.getElementById("1").innerHTML = answers[which - 1][0][0];
+            document.getElementById("2").innerHTML = answers[which - 1][1][0];
+            document.getElementById("3").innerHTML = answers[which - 1][2][0];
+            document.getElementById("4").innerHTML = answers[which - 1][3][0];
             if(once < 1){
                 var btn = document.createElement("button");
                 btn.innerHTML = "Answer";
                 btn.addEventListener("click", function () {
-                    answerGet(which)
+                    answerGet(which);
                 });         
                 document.body.appendChild(btn);
                 var btn2 = document.createElement("button");
                 btn2.innerHTML = "Questions";
                 btn2.addEventListener("click", function () {
-                    answer(which)
+                    answer(which);
                 });         
                 document.body.appendChild(btn2);
             }
             once+=1;
         };
         function answerGet(which){
-            window.scrollBy(0, 99999999)
-            document.getElementById("1").innerHTML = answers[which - 1][0][1]
-            document.getElementById("2").innerHTML = answers[which - 1][1][1]
-            document.getElementById("3").innerHTML = answers[which - 1][2][1]
-            document.getElementById("4").innerHTML = answers[which - 1][3][1]
+            window.scrollBy(0, 99999999);
+            document.getElementById("1").innerHTML = answers[which - 1][0][1];
+            document.getElementById("2").innerHTML = answers[which - 1][1][1];
+            document.getElementById("3").innerHTML = answers[which - 1][2][1];
+            document.getElementById("4").innerHTML = answers[which - 1][3][1];
         };
     </script>
     
